@@ -22,6 +22,10 @@ class NumberList {
 	 */
 	public void addFromOneTo(Integer limit) {
 		//TODO ここから実装する
+		for (int i = 0; i < limit; i++) {
+
+			numbers.add(i);
+		}
 
 	}
 
@@ -33,6 +37,9 @@ class NumberList {
 	public Integer calcSumOfList() {
 		Integer sum = 0;
 		//TODO ここから実装する
+		for (int num : numbers) {
+			sum += num;
+		}
 
 		return sum;
 	}

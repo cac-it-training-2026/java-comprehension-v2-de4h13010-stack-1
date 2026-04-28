@@ -1,32 +1,9 @@
-package q01_basic.question04;
+package q01_basic.question06;
 
-class Member {
-	//TODO ここから実装する
-
-	/**
-	 * 引数なしコンストラクタ
-	 */
-	public Member() {
-	}
-
-	/**
-	 * @param id
-	 * @param password
-	 * @param name
-	 * @param age
-	 * @param rank
-	 */
-	public Member(int id, String password, String name, int age, int rank) {
-		this.id = id;
-		this.password = password;
-		this.name = name;
-		this.age = age;
-		this.rank = rank;
-	}
+public class Member extends AbstMember {
 
 	private int id;
 	private String password;
-	private String name;
 	private int age;
 	private int rank;
 
@@ -59,20 +36,6 @@ class Member {
 	}
 
 	/**
-	 * @return name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @param name セットする name
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	/**
 	 * @return age
 	 */
 	public int getAge() {
@@ -100,6 +63,33 @@ class Member {
 		this.rank = rank;
 	}
 
+	/**
+	 * 引数なしのコンストラクタ
+	 */
+	public Member() {
+	}
+
+	/**
+	 * @param id
+	 * @param password
+	 * @param age
+	 * @param rank
+	 */
+	public Member(int id, String password, String name, int age, int rank) {
+		this.id = id;
+		this.password = password;
+		this.setName(name);
+		this.age = age;
+		this.rank = rank;
+	}
+
+	@Override
+	public void buyItem() {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
+	@Override
 	public void showMember() {
 		System.out.println("***MEMBER DATA***");
 		System.out.println("id：" + getId());
@@ -108,6 +98,8 @@ class Member {
 		System.out.println("age：" + getAge());
 		System.out.println("rank：" + getRank());
 		System.out.println("*****************");
+
+		// TODO 自動生成されたメソッド・スタブ
 
 	}
 
